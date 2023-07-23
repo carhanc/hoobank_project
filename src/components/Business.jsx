@@ -5,7 +5,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const FeatureCard = ({icon, title, content, index}) => (
-  <div data-aos="fade-up" className={`flex p-6 rounded-[20px]
+  <div data-aos="fade-up" id="features" className={`flex p-6 rounded-[20px]
   ${index !== features.length - 1 ? "mb-6" : "mb-0"} 
   hover:bg-gradient-to-r from-gray-600 to hover:bg-gray-900 hover:transition ease-linear duration-700`}>
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>

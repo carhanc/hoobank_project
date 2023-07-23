@@ -6,11 +6,13 @@ import 'aos/dist/aos.css'
 const GetStarted = () => (
     <div className="relative group">
       <div className="absolute inset-0 rounded-full group-hover:bg-cyan-600 blur-2xl transition 
-      duration-[600ms] ease-out"/>
+      duration-[600ms] ease-out" />
       <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full
-      bg-blue-gradient p-[2px] cursor-pointer hover:scale-[1.1] ease-linear duration-200 relative`}>
+      bg-blue-gradient p-[2px] cursor-pointer hover:scale-[1.1] ease-linear duration-200` }>
         <div className={`${styles.flexCenter} flex-col bg-primary 
-        w-[100%] h-[100%] rounded-full`}>
+        w-[100%] h-[100%] rounded-full relative`} 
+        // style="text-shadow: rgb(152, 255, 255) 0px 0px 0px; box-shadow: rgb(152, 255, 255) 0px 0px 0px; transform: none"
+        >
           <div className={`${styles.flexStart} flex-row`}>
 
             <p className="font-poppins font-medium text-[18px] leading-[23px] mr-0.5">

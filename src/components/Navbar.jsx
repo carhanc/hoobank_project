@@ -13,18 +13,21 @@ const Navbar = () => {
   }, [])
 
   const [activeButton, setActiveButton] = useState('');
+  const [active, setActive] = useState('')
 
   const changeColor = (id) => {
     setActiveButton(id)
   };
 
   return (
-    <nav id='home' className={`flex py-6 items-center navbar justify-around backdrop-blur-lg shadow-md w-full fixed z-10 ${styles.paddingX} xl:px-[315px]`}>
+    <nav className={`flex py-6 items-center navbar justify-around backdrop-blur-lg shadow-md w-full fixed z-10 ${styles.paddingX} xl:px-[315px]`}>
       <hr className=''/>
       
-      <a href='#' onClick={window.scrollTo({ top: 0, behavior: 'smooth' })} className='cursor-pointer'>
+      <a href='#' 
+      // onClick={() => {setActive(""); window.scrollTo(0, 0) }} 
+      className='cursor-pointer text-white'>
 
-        <img src={logo} alt="hoobank" className='w-[124px] h-[32px]'/>
+        <img src={logo} alt="Dockerly" className='w-[124px] h-[32px]'/>
 
       </a>
 
@@ -32,7 +35,7 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
           key={nav.id}
-          className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} 
+          className={`font-poppins font-normal cursor-pointer text-[18px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} 
           text-${nav.id === activeButton ? 'white' : 'dimWhite'} hover:text-white ease-linear duration-300`}
           onClick={() => changeColor(nav.id)}
           >
