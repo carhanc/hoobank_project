@@ -12,7 +12,7 @@ const Navbar = () => {
     Aos.init({duration: 3000});
   }, [])
 
-  const [activeButton, setActiveButton] = useState('');
+  const [activeButton, setActiveButton] = useState('home');
   const [active, setActive] = useState('')
 
   const changeColor = (id) => {
