@@ -1,11 +1,10 @@
 import React from 'react'
+import styles from '../style'
 
 const Blank = () => (
-    <div className='my-4'>
-        <div className='my-4'>
-
-        </div>
-    </div>
+    <section className={`py-7 text-white`} id="home">
+      
+    </section>
   )
 
 

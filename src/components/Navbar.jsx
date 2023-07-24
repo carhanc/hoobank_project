@@ -20,10 +20,12 @@ const Navbar = () => {
   };
 
   return (
+    <div id="home">
     <nav className={`flex py-6 items-center navbar justify-around backdrop-blur-lg shadow-md w-full fixed z-10 ${styles.paddingX} xl:px-[315px]`}>
       <hr className=''/>
       
-      <a href='#' 
+      <a 
+      href='#home' 
       // onClick={() => {setActive(""); window.scrollTo(0, 0) }} 
       className='cursor-pointer text-white'>
 
@@ -84,7 +86,91 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </div>
   )
 }
 
 export default Navbar
+
+// import React, { useEffect, useState } from "react";
+// import styles from '../style';
+// import { navLinks } from "../constants";
+// import { logo, menu, close } from "../assets";
+
+// const Navbar = () => {
+
+//   const [active, setActive] = useState('')
+//   const [toggle, setToggle] = useState(false)
+
+//   return (
+//     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+
+//         <div className=" w-full flex justify-between items-center max-w-7xl mx-auto">
+
+//         <a href='#' 
+//         // onClick={() => {setActive(""); window.scrollTo(0, 0) }} 
+//         className='cursor-pointer text-white'>
+
+//           <img src={logo} alt="Dockerly" className='w-[124px] h-[32px]'/>
+
+//         </a>
+
+//           <ul className=" list-none hidden sm:flex flex-row gap-10">
+//               {navLinks.map((link) => (
+//                 <li
+//                   key={link.id}
+//                   className={`${
+//                     active === link.title 
+//                       ? "text-white" 
+//                       : "text-dimWhite"
+//                   } hover:text-white text-[18px] font-medium cursor-pointer ease-in duration-150 font-poppins`}
+//                   onClick={() => setActive (link.title)}
+//                 >
+//                   <a href={`#${link.id}`}>{link.title}</a>
+//                 </li>
+//               ))}
+//           </ul>
+
+//           <div className=" sm:hidden justify-end flex flex-1 items-center">
+//             <img 
+//               src={toggle ? close : menu} 
+//               alt="menu" 
+//               className="w-[28px] h-[28px] 
+//               object-contain cursor-pointer"
+//               onClick={() => setToggle(!toggle)}
+//             />
+
+//             <div className={`${!toggle ? 'hidden' : 'flex' } 
+//             p-6  black-gradient absolute top-20 right-0 
+//             mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+
+//               <ul className=" list-none flex justify-in items-start flex-col gap-4">
+//                 {navLinks.map((link) => (
+//                   <li
+//                     key={link.id}
+//                     className={`${
+//                       active === link.title 
+//                         ? "text-white" 
+//                         : "text-dimWhite"
+//                     } font-poppins font-medium text-[16px] 
+//                     cursor-pointer ease-in duration-150`}
+//                     onClick={() => {
+//                       setToggle(!toggle)
+//                       setActive (link.title)
+//                     }}
+//                   >
+//                     <a href={`#${link.id}`}>{link.title}</a>
+//                   </li>
+//                 ))}
+//               </ul>
+
+//             </div>
+            
+//           </div>
+//         </div>
+
+//     </nav>
+//   )
+// }
+
+// export default Navbar

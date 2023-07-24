@@ -4,12 +4,12 @@ import { discount, robot } from '../assets'
 import GetStarted from './GetStarted'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import Blank from './Blank'
 
 const Hero = () => (
     <section 
-    data-aos="fade-down" 
-    // id='home' 
-    className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+    data-aos="fade-down"
+    className={`flex md:flex-row flex-col ${styles.paddingY} `}>
       <div className={` flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
 
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
@@ -30,7 +30,7 @@ const Hero = () => (
           </h1>
 
           <div className=' ss:flex hidden md:mr-4 mr-0'>
-            <GetStarted />
+            <GetStarted/>
           </div>
         </div>    
 
